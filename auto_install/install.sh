@@ -882,7 +882,7 @@ chooseInterface() {
   else
     # Find network interfaces whose state is UP
     availableInterfaces="$(echo "${availableInterfaces}" \
-      | awk '/state UP/ {print $2}')"
+      | awk '/state UNKNOWN/ {print $2}')"
   fi
 
   # Skip virtual, loopback and docker interfaces
